@@ -29,4 +29,14 @@
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Pages\Models\Index.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
 </Project>

@@ -34,7 +34,7 @@ namespace CarRentalManagement.Server.Controllers
                 return NotFound();
             }
 
-            var bookings = await _unitofWork.Bookings.GetAll();
+            var bookings = await _unitofWork.Bookings.GetAll(includes: q => q.Include(x => x.Vehicle).Include(x => x.Customer));
             return Ok(bookings);
         }
 
